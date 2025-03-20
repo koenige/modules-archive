@@ -27,9 +27,14 @@ $zz['fields'][3]['fields'] = ['code'];
 $zz['fields'][3]['hide_in_list'] = true;
 
 $zz['fields'][2]['field_name'] = 'item';
+$zz['fields'][2]['link'] = [
+	'area' => 'archive_item',
+	'fields' => ['identifier']
+];
 
 $zz['fields'][4]['field_name'] = 'description';
 $zz['fields'][4]['type'] = 'memo';
+$zz['fields'][4]['format'] = 'markdown';
 $zz['fields'][4]['hide_in_list'] = true;
 
 $zz['fields'][5]['title'] = 'Category';
@@ -64,6 +69,7 @@ $zz['fields'][8]['fields'][2]['type'] = 'foreign_key';
 
 $zz['fields'][9]['field_name'] = 'remarks';
 $zz['fields'][9]['type'] = 'memo';
+$zz['fields'][9]['format'] = 'markdown';
 $zz['fields'][9]['hide_in_list'] = true;
 
 $zz['fields'][10]['title'] = 'Main Item';
