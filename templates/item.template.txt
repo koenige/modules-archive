@@ -1,0 +1,53 @@
+# archive module
+# HTML template for link to document
+#
+# Part of »Zugzwang Project«
+# https://www.zugzwang.org/modules/archive
+#
+# @author Gustaf Mossakowski <gustaf@koenige.org>
+# @copyright Copyright © 2025 Gustaf Mossakowski
+# @license http://opensource.org/licenses/lgpl-3.0.html LGPL-3.0
+#
+<section class="item">
+<section class="item-data">
+<h2>%%% item category %%%</h2>
+
+%%% item description markdown %%%
+
+%%% if width_cm | length_cm | height_cm %%%
+<h2>%%% text Size %%%</h2>
+%%% item width_cm "%s cm" %%% %%% item length_cm "× %s cm" %%% %%% item height_cm "× %s cm" %%%
+
+%%% if remarks %%%
+<h2>%%% text Remarks %%%</h2>
+%%% item remarks markdown %%%
+%%% endif %%%
+
+%%% if main_identifier %%%
+<h2>%%% text Position %%%</h2>
+<p><a href="%%% path archive_item main_identifier %%%">%%% item main_item %%%</a></p>
+%%% endif %%%
+
+%%% if inside %%%
+<h2>%%% text Related Items %%%</h2>
+<ul class="items">
+%%% loop inside %%%
+<li><a href="%%% path archive_item identifier %%%">%%% item code %%%: %%% item item %%%</a></li>
+%%% loop end %%%
+</ul>
+%%% endif %%%
+</section>
+<section class="item-media js-gallery">
+%%% loop images_overview 1 %%%
+%%% include image %%%
+%%% loop end %%%
+
+<section class="item-more-media">
+%%% loop images 2- %%%
+%%% include image %%%
+%%% loop end %%%
+</section>
+</section>
+
+<p class="created"><em>%%% text Created: %%% %%% item created %%%</em></p>
+</section>
