@@ -22,6 +22,7 @@ function mod_archive_item($params) {
 			, category
 			, main_items.identifier AS main_identifier
 			, main_items.item AS main_item
+			, main_items.code AS main_code
 		FROM items
 		LEFT JOIN categories
 			ON items.type_category_id = categories.category_id
