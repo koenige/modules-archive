@@ -100,3 +100,21 @@ $zz['sql'] = 'SELECT /*_PREFIX_*/items.*
 $zz['sqlorder'] = ' ORDER BY identifier';
 
 $zz['record']['copy'] = true;
+
+$zz['filter'][1]['title'] = wrap_text('Categories');
+$zz['filter'][1]['identifier'] = 'category';
+$zz['filter'][1]['type'] = 'list';
+$zz['filter'][1]['where'] = 'type_category_id';
+$zz['filter'][1]['sql'] = 'SELECT DISTINCT category_id, category
+	FROM /*_PREFIX_*/items
+	LEFT JOIN /*_PREFIX_*/categories
+		ON /*_PREFIX_*/items.type_category_id = /*_PREFIX_*/categories.category_id
+';
+
+$zz['filter'][2]['title'] = wrap_text('Area');
+$zz['filter'][2]['identifier'] = 'area';
+$zz['filter'][2]['type'] = 'list';
+$zz['filter'][2]['where'] = 'SUBSTRING(code, 1, 2)';
+$zz['filter'][2]['sql'] = 'SELECT DISTINCT SUBSTRING(code, 1, 2), SUBSTRING(code, 1, 2)
+	FROM /*_PREFIX_*/items
+';
