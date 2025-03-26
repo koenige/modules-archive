@@ -31,6 +31,7 @@ $zz['fields'][2]['link'] = [
 	'area' => 'archive_item',
 	'fields' => ['identifier']
 ];
+$zz['fields'][2]['link_record'] = true;
 
 $zz['fields'][4]['field_name'] = 'description';
 $zz['fields'][4]['type'] = 'memo';
