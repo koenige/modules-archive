@@ -66,7 +66,7 @@ $zz['fields'][7]['type'] = 'number';
 $zz['fields'][8] = zzform_include('items-media');
 $zz['fields'][8]['title'] = 'Media';
 $zz['fields'][8]['type'] = 'subtable';
-$zz['fields'][8]['max_records'] = 50;
+$zz['fields'][8]['max_records'] = 100;
 $zz['fields'][8]['fields'][2]['type'] = 'foreign_key';
 
 $zz['fields'][9]['field_name'] = 'remarks';
@@ -119,3 +119,6 @@ $zz['filter'][2]['where'] = 'SUBSTRING(code, 1, 2)';
 $zz['filter'][2]['sql'] = 'SELECT DISTINCT SUBSTRING(code, 1, 2), SUBSTRING(code, 1, 2)
 	FROM /*_PREFIX_*/items
 ';
+
+$zz['export'][] = 'CSV Excel';
+
