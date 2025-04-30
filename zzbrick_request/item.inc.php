@@ -38,7 +38,8 @@ function mod_archive_item($params) {
 		LEFT JOIN items_media
 			ON items_media.item_id = items.item_id
 			AND sequence = 1
-		WHERE main_item_id = %d';
+		WHERE main_item_id = %d
+		ORDER BY code';
 	$sql = sprintf($sql, $data['item_id']);
 	$data['inside'] = wrap_db_fetch($sql, 'item_id');
 	
