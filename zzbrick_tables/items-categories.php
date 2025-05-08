@@ -71,4 +71,11 @@ $zz['sql'] = 'SELECT /*_PREFIX_*/items_categories.*
 	LEFT JOIN /*_PREFIX_*/items USING (item_id)
 	LEFT JOIN /*_PREFIX_*/categories USING (category_id)
 ';
-$zz['sqlorder'] = ' ORDER BY /*_PREFIX_*/items.filename, /*_PREFIX_*/items_categories.sequence, /*_PREFIX_*/categories.path';
+$zz['sqlorder'] = ' ORDER BY /*_PREFIX_*/items.identifier, /*_PREFIX_*/items_categories.sequence, /*_PREFIX_*/categories.path';
+
+
+$zz['subselect']['sql'] = 'SELECT item_id, category_id, category
+	FROM /*_PREFIX_*/items_categories
+	LEFT JOIN /*_PREFIX_*/categories USING (category_id)';
+$zz['subselect']['sql_translate'] = ['category_id' => 'categories'];
+$zz['subselect']['sql_ignore'] = ['category_id'];

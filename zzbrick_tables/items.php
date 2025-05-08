@@ -48,6 +48,18 @@ $zz['fields'][5]['display_field'] = 'category';
 $zz['fields'][5]['show_hierarchy'] = 'main_category_id';
 $zz['fields'][5]['show_hierarchy_subtree'] = wrap_category_id('item-types');
 
+// item categories
+$zz['fields'][30] = [];
+$zz['fields'][31] = [];
+$zz['fields'][32] = [];
+$zz['fields'][33] = [];
+$zz['fields'][34] = [];
+$zz['fields'][35] = [];
+$zz['fields'][36] = [];
+$zz['fields'][37] = [];
+$zz['fields'][38] = [];
+$zz['fields'][39] = [];
+
 $zz['fields'][6]['title'] = 'Width';
 $zz['fields'][6]['field_name'] = 'width_cm';
 $zz['fields'][6]['unit'] = 'cm';
