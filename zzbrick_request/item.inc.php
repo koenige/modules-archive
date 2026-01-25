@@ -8,7 +8,7 @@
  * https://www.zugzwang.org/modules/archive
  *
  * @author Gustaf Mossakowski <gustaf@koenige.org>
- * @copyright Copyright © 2025 Gustaf Mossakowski
+ * @copyright Copyright © 2025-2026 Gustaf Mossakowski
  * @license http://opensource.org/licenses/lgpl-3.0.html LGPL-3.0
  */
 
@@ -43,7 +43,7 @@ function mod_archive_item($params) {
 	$sql = sprintf($sql, $data['item_id']);
 	$data['inside'] = wrap_db_fetch($sql, 'item_id');
 	
-	$data += wrap_get_media($data['item_id'], 'items', 'item');
+	$data += wrap_media($data['item_id'], 'items');
 	if (!empty($data['images_overview'])) {
 		foreach ($data['images_overview'] as $medium_id => $medium) {
 			$data['images_overview'][$medium_id]['path'] = '480';
