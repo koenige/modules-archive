@@ -5,14 +5,14 @@
 # https://www.zugzwang.org/modules/archive
 #
 # @author Gustaf Mossakowski <gustaf@koenige.org>
-# @copyright Copyright © 2025 Gustaf Mossakowski
+# @copyright Copyright © 2025-2026 Gustaf Mossakowski
 # @license http://opensource.org/licenses/lgpl-3.0.html LGPL-3.0
 #
 <section class="item">
 <section class="item-data">
 <h2>%%% item category %%%</h2>
 
-%%% item description markdown %%%
+%%% item description format=markdown %%%
 
 %%% if width_cm | length_cm | height_cm %%%
 <h2>%%% text Size %%%</h2>
@@ -21,7 +21,7 @@
 
 %%% if remarks %%%
 <h2>%%% text Remarks %%%</h2>
-%%% item remarks markdown %%%
+%%% item remarks format=markdown %%%
 %%% endif %%%
 
 %%% if main_identifier %%%
