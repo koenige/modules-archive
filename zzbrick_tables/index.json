@@ -1,0 +1,11 @@
+{
+    "items": {
+        "title": "Items"
+    },
+    "items_categories": {
+        "title": "Item Categories"
+    },
+    "items_media": {
+        "title": "Media for Items"
+    }
+}

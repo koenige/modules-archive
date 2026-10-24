@@ -8,7 +8,7 @@
  * https://www.zugzwang.org/modules/archive
  *
  * @author Gustaf Mossakowski <gustaf@koenige.org>
- * @copyright Copyright © 2025 Gustaf Mossakowski
+ * @copyright Copyright © 2025-2026 Gustaf Mossakowski
  * @license http://opensource.org/licenses/lgpl-3.0.html LGPL-3.0
  */
 
@@ -30,8 +30,6 @@ $zz['fields'][2]['sql'] = 'SELECT /*_PREFIX_*/items.item_id
 		, code, /*_PREFIX_*/items.item
 	FROM /*_PREFIX_*/items 
 	ORDER BY /*_PREFIX_*/items.identifier';
-$zz['fields'][2]['sql_character_set'][1] = 'utf8';
-$zz['fields'][2]['sql_character_set'][2] = 'utf8';
 $zz['fields'][2]['display_field'] = 'item';
 $zz['fields'][2]['exclude_from_search'] = true;
 
